@@ -1,12 +1,11 @@
-import Input from "./components/Input";
+import FibonacciNumbers from "../components/FibonacciNumbers";
 
-function App() {
+const App = () => {
   return (
     <div className="main">
-      <h1>Fibonacchi number sequence</h1>
-      <Input />
+      <FibonacciNumbers />
     </div>
   );
-}
+};
 
 export default App;

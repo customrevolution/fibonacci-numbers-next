@@ -1,0 +1,18 @@
+.sequenceListItem {
+  display: inline-block;
+  padding: 10px 30px;
+  margin: 10px;
+  font-size: 25px;
+  border: none;
+  color: white;
+  background-color: rgb(224, 38, 38);
+  text-align: center;
+  transition: 0.2s;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+
+.sequenceListItem:hover {
+  background-color: rgb(255, 251, 4);
+  color: black;
+}
