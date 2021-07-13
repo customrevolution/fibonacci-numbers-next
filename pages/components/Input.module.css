@@ -1,0 +1,42 @@
+.input h1 {
+  text-align: center;
+  font-size: 140px;
+  text-shadow: 2px 5px 2px rgb(238, 16, 0);
+  color: rgb(253, 235, 155);
+  text-transform: uppercase;
+}
+
+.label {
+  text-align: center;
+  font-size: 20px;
+  color: rgb(192, 133, 128);
+}
+
+.label label {
+  color: rgb(223, 52, 37);
+}
+
+.input {
+  text-align: center;
+  margin-top: 10px;
+}
+.input input {
+  width: 300px;
+  height: 60px;
+  border-left: 5px solid rgb(206, 253, 35);
+  border-top: 5px solid rgb(206, 253, 35);
+  border-bottom: 5px solid rgb(255, 0, 0);
+  border-right: 5px solid rgb(255, 0, 0);
+  /* border: 5px solid rgb(206, 253, 35); */
+  /* box-shadow: 3px 3px 2px rgb(255, 0, 0); */
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.input input:focus {
+  border-left: 5px solid rgb(255, 0, 0);
+  border-top: 5px solid rgb(255, 0, 0);
+  border-bottom: 5px solid rgb(206, 253, 35);
+  border-right: 5px solid rgb(206, 253, 35);
+  outline: none;
+}
