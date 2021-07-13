@@ -6,9 +6,7 @@ const FibonacciNumbers = () => {
   const [fibNumbers, setFibNumbers] = useState([]);
   const [alert, setAlert] = useState("*n u m b e r s*");
 
-  const getFibNumbersTo = (numberTo) => {
-    const fibNumbers = [0, 1];
-
+  const newFibNumbers = (index, numberTo, fibNumbers) => {
     if (numberTo == 0) return [];
 
     if (numberTo == 1) return [0];
@@ -18,16 +16,16 @@ const FibonacciNumbers = () => {
       return [];
     } else setAlert("*n u m b e r s*");
 
-    for (let i = 2; i < numberTo; i++) {
-      fibNumbers.push(fibNumbers[i - 1] + fibNumbers[i - 2]);
+    if (index < numberTo) {
+      fibNumbers[index] = fibNumbers[index - 1] + fibNumbers[index - 2];
+      newFibNumbers(index + 1, numberTo, fibNumbers);
     }
 
     return fibNumbers;
   };
 
   const handleChange = (numberToSequence) => {
-    const sequenceNumbers = getFibNumbersTo(numberToSequence.target.value);
-    setFibNumbers([...sequenceNumbers]);
+    setFibNumbers(newFibNumbers(2, numberToSequence.target.value, [0, 1]));
   };
 
   return (

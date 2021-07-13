@@ -5,8 +5,8 @@ const Sequence = (props) => {
     <div className={classes.sequence}>
       <ul>
         {props.fibNumbers.map((number) => (
-          <li className={classes.sequenceListItem}>
-            <p>{number}</p>
+          <li className={classes.sequenceListItem} key={number}>
+            <span>{number}</span>
           </li>
         ))}
       </ul>
