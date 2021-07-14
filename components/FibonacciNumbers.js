@@ -21,7 +21,7 @@ const FibonacciNumbers = () => {
       newFibNumbers(index + 1, numberTo, fibNumbers);
     }
 
-    return fibNumbers;
+    return [fibNumbers[numberTo - 1]];
   };
 
   const handleChange = (numberToSequence) => {
