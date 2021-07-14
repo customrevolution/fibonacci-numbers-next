@@ -29,13 +29,13 @@ const FibonacciNumbers = () => {
 
     if (numberTo == 0) return [];
 
-    if (numberTo == 1) return [0];
+    if (numberTo == 1) return [1];
 
     for (let i = 2; i <= numberTo; i++) {
       fibNumbers[i] = fibNumbers[i - 1] + fibNumbers[i - 2];
     }
 
-    return [fibNumbers[numberTo - 1]];
+    return [fibNumbers[numberTo]];
   };
 
   const handleChange = (numberToSequence) => {
