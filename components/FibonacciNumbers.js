@@ -27,20 +27,20 @@ const FibonacciNumbers = () => {
   const getFibNumber = (numberTo) => {
     const fibNumbers = [0, 1];
 
-    if (numberTo == 0) return null;
+    if (numberTo == 0) return [];
 
-    if (numberTo == 1) return 0;
+    if (numberTo == 1) return [0];
 
     for (let i = 2; i <= numberTo; i++) {
       fibNumbers[i] = fibNumbers[i - 1] + fibNumbers[i - 2];
     }
 
-    return fibNumbers[numberTo - 1];
+    return [fibNumbers[numberTo - 1]];
   };
 
   const handleChange = (numberToSequence) => {
     // setFibNumbers(newFibNumbers(2, numberToSequence.target.value, [0, 1]));
-    setFibNumbers([getFibNumber(numberToSequence.target.value)]);
+    setFibNumbers(getFibNumber(numberToSequence.target.value));
   };
 
   return (
